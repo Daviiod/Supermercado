@@ -18,7 +18,7 @@ class DataBase{
         $this->setConnection();
     }
     //metodo que cria conexao com o banco
-    public function setConnection(){
+    private function setConnection(){
         $this->connection = new PDO('mysql:host='.self::HOST.';dbname='.self::DBNAME,self::USER,self::PASSWORD);
         $this->connection->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
     }
